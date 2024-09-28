@@ -132,3 +132,37 @@ input::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .tips {
+        height: 32px;
+        width: 42px;
+    }
+
+    .custom {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: 100% 60%;
+    }
+
+    .container {
+        width: 95%;
+        max-width: 350px;
+        padding: 20px 15px;
+    }
+
+    .lbl, .lb {
+        font-size: 0.9em; 
+    }
+
+}
