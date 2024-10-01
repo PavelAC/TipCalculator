@@ -133,6 +133,22 @@ input::-webkit-outer-spin-button{
     margin: 0;
 }
 
+#reset-btn{
+    background-color: var(--mainColor1);
+    margin-top: 0.2em;
+    color: white;
+    height: 36px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 95%;

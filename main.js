@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const totalAmountDisplay = document.getElementById('total-amount');
     const tips = document.querySelectorAll('.tips');
     const customTip = document.querySelector('.custom')
+    const resetButton = document.getElementById('reset-btn');
 
     let billValue=0.00;
     let tipPercentage = 0;
@@ -13,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const tipAmount=(billValue * tipPercentage) / 100;
         const totalAmount = billValue+tipAmount;
 
-        tipAmountDisplay.textContent =`$${tipAmount.toFixed(2)}`;
-        totalAmountDisplay.textContent=`$${totalAmount.toFixed(2)}`
+        tipAmountDisplay.textContent =`€${tipAmount.toFixed(2)}`;
+        totalAmountDisplay.textContent=`€${totalAmount.toFixed(2)}`;
     }
 
     billInput.addEventListener('input',function(e){
@@ -39,4 +40,12 @@ document.addEventListener('DOMContentLoaded', function(){
         tipandtotal();
     });
     
+    resetButton.addEventListener('click', function() {
+        billInput.value='';
+        customTip.value='';
+        billValue=0.00;
+        tipPercentage=0;
+        tipAmountDisplay.textContent='€0.00';
+        totalAmountDisplay.textContent='€0.00'
+    });
 });
