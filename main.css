@@ -30,6 +30,7 @@ body{
     width: 450px;
     padding: 50px 40px;
     transform: translate(-50%,-50%);
+    margin:10vh 0;
 }
 
 .wrapper{
@@ -149,36 +150,59 @@ input::-webkit-outer-spin-button{
     border: none;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        max-width: 400px;
-        padding: 20px;
-    }
-
-    .tips {
-        height: 32px;
-        width: 42px;
-    }
-
-    .custom {
-        padding: 6px;
-    }
+.payer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-@media (max-width: 480px) {
-    body {
-        background-size: 100% 60%;
-    }
+/* wheel */
 
-    .container {
-        width: 95%;
-        max-width: 350px;
-        padding: 20px 15px;
-    }
+.wheel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 
-    .lbl, .lb {
-        font-size: 0.9em; 
-    }
+.center-circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+}
+
+.InputArea {
+    margin: 10px;
+}
+
+
+
+#namesTextarea {
+    width: auto; /* Adjusts the width to fit content */
+    height: auto; /* Adjusts the height to fit content */
+    resize: none; /* Prevents user from resizing */
+    font-size: 1em; /* Adjusts font size */
+    line-height: 1.2; /* Adjusts line height */
+    overflow-y: hidden; /* Hides vertical scroll */
+    min-width: 100px; /* Sets a minimum width */
+    background-color: var(--backColor1);
+    color: #000;
+    font-weight: 600;
 
 }
